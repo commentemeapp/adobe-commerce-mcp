@@ -1,0 +1,43 @@
+adobe-commerce-mcp
+Copyright (c) 2026 José Luiz Rodrigues
+Licensed under the MIT License (see LICENSE).
+
+This package bundles text and data derived from the official Adobe Commerce documentation,
+including the REST OpenAPI schemas of commerce-webapi. The files in data/ were generated
+by scripts/ingerir.ts from the repositories below, at the commits listed. Markdown was
+converted (front matter, MDX and Experience League markup removed, includes expanded,
+images dropped); the content was not otherwise edited.
+
+AdobeDocs/commerce-php (Apache-2.0)
+  https://github.com/AdobeDocs/commerce-php
+  commit 80d81d1922af3e1669a2535370a31138708cadff
+  license file: LICENSE, copied to data/licenses/commerce-php.txt
+
+AdobeDocs/commerce-frontend-core (Apache-2.0)
+  https://github.com/AdobeDocs/commerce-frontend-core
+  commit e5fdcee72dbe04d2e5c9d4479f7fe60070477a5d
+  license file: LICENSE, copied to data/licenses/commerce-frontend-core.txt
+
+AdobeDocs/commerce-webapi (Apache-2.0)
+  https://github.com/AdobeDocs/commerce-webapi
+  commit 8e7aaed872aa5bf53d979e6c13abb7a4952a8672
+  license file: LICENSE, copied to data/licenses/commerce-webapi.txt
+
+AdobeDocs/commerce-operations.en (MIT)
+  https://github.com/AdobeDocs/commerce-operations.en
+  commit b9382dc0f240bcebddcb833940f6074854949964
+  license file: license.md, copied to data/licenses/commerce-operations.en.txt
+
+commerce-php and commerce-webapi:
+  © Copyright 2015-2020 Adobe. All rights reserved. Licensed under the Apache License, Version 2.0.
+commerce-frontend-core:
+  © Copyright 2015-2025 Adobe. All rights reserved. Licensed under the Apache License, Version 2.0.
+commerce-operations.en:
+  © Copyright 2021-2026 Adobe. All rights reserved. Licensed under the MIT License.
+
+The scaffolding templates in src/tools/ are adapted from code examples in those
+documentation pages; each generated file names the page it was adapted from.
+No code or XSD from the magento/magento2 repository is included.
+
+Adobe and Adobe Commerce are trademarks of Adobe. Magento is a trademark of Adobe.
+This project is not affiliated with or endorsed by Adobe.
