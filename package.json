@@ -1,0 +1,62 @@
+{
+  "name": "adobe-commerce-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.zeluizr/adobe-commerce-mcp",
+  "description": "MCP server for Adobe Commerce (Magento Open Source) PHP development: offline official docs, config files, CLI, Web API and module scaffolding",
+  "type": "module",
+  "bin": {
+    "adobe-commerce-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "lint": "tsc --noEmit && tsc -p tsconfig.scripts.json",
+    "dev": "tsc --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "ingerir": "tsx scripts/ingerir.ts",
+    "test": "node --test test/*.test.mjs",
+    "probar-mcp": "node scripts/probar-mcp.mjs",
+    "rastros": "node scripts/rastros.mjs",
+    "check": "npm run format:check && npm run lint && npm run build && npm test && npm run probar-mcp && npm run rastros",
+    "inspect": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "files": [
+    "build",
+    "data",
+    "NOTICE"
+  ],
+  "keywords": [
+    "mcp",
+    "adobe-commerce",
+    "magento",
+    "magento2",
+    "php",
+    "ecommerce",
+    "graphql",
+    "rest"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://www.npmjs.com/package/adobe-commerce-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeluizr/adobe-commerce-mcp.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "fast-xml-parser": "^5.11.2",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "yaml": "^2.9.1"
+  }
+}

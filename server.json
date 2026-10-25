@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zeluizr/adobe-commerce-mcp",
+  "title": "Adobe Commerce MCP",
+  "description": "Offline Adobe Commerce PHP docs, config files, bin/magento CLI, Web API and module scaffolding",
+  "websiteUrl": "https://github.com/zeluizr/adobe-commerce-mcp#readme",
+  "repository": {
+    "url": "https://github.com/zeluizr/adobe-commerce-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "adobe-commerce-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
