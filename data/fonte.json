@@ -1,0 +1,46 @@
+[
+  {
+    "repo": "AdobeDocs/commerce-php",
+    "url": "https://github.com/AdobeDocs/commerce-php",
+    "commit": "80d81d1922af3e1669a2535370a31138708cadff",
+    "license": "Apache-2.0",
+    "licenseFile": "LICENSE",
+    "licenseHeader": "Apache License",
+    "area": "php",
+    "publicUrl": "https://developer.adobe.com/commerce/php/",
+    "documents": 807
+  },
+  {
+    "repo": "AdobeDocs/commerce-frontend-core",
+    "url": "https://github.com/AdobeDocs/commerce-frontend-core",
+    "commit": "e5fdcee72dbe04d2e5c9d4479f7fe60070477a5d",
+    "license": "Apache-2.0",
+    "licenseFile": "LICENSE",
+    "licenseHeader": "Apache License",
+    "area": "frontend",
+    "publicUrl": "https://developer.adobe.com/commerce/frontend-core/",
+    "documents": 262
+  },
+  {
+    "repo": "AdobeDocs/commerce-webapi",
+    "url": "https://github.com/AdobeDocs/commerce-webapi",
+    "commit": "8e7aaed872aa5bf53d979e6c13abb7a4952a8672",
+    "license": "Apache-2.0",
+    "licenseFile": "LICENSE",
+    "licenseHeader": "Apache License",
+    "area": "webapi",
+    "publicUrl": "https://developer.adobe.com/commerce/webapi/",
+    "documents": 532
+  },
+  {
+    "repo": "AdobeDocs/commerce-operations.en",
+    "url": "https://github.com/AdobeDocs/commerce-operations.en",
+    "commit": "b9382dc0f240bcebddcb833940f6074854949964",
+    "license": "MIT",
+    "licenseFile": "license.md",
+    "licenseHeader": "# MIT License",
+    "area": "operations",
+    "publicUrl": "https://experienceleague.adobe.com/en/docs/commerce-operations/",
+    "documents": 295
+  }
+]
