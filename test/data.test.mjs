@@ -94,7 +94,7 @@ test('structured references are present', () => {
 
 test('the package ships data and build only', () => {
   const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf-8'))
-  assert.deepEqual(pkg.files, ['build', 'data'])
+  assert.deepEqual(pkg.files, ['build', 'data', 'NOTICE'])
   assert.equal(pkg.bin['adobe-commerce-mcp'], 'build/index.js')
   assert.equal(pkg.mcpName, 'io.github.zeluizr/adobe-commerce-mcp')
 })

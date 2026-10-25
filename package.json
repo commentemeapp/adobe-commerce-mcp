@@ -22,7 +22,8 @@
   },
   "files": [
     "build",
-    "data"
+    "data",
+    "NOTICE"
   ],
   "keywords": [
     "mcp",
