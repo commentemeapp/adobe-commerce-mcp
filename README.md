@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/banner.png" width="100%" alt="adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales">
-</p>
+![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales](https://raw.githubusercontent.com/zeluizr/adobe-commerce-mcp/main/assets/banner.png)
 
 # adobe-commerce-mcp
 
