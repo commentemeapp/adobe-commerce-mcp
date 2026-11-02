@@ -1,7 +1,7 @@
 {
-  "name": "adobe-commerce-mcp",
-  "version": "0.1.0",
-  "mcpName": "io.github.zeluizr/adobe-commerce-mcp",
+  "name": "@commenteme/adobe-commerce-mcp",
+  "version": "0.2.0",
+  "mcpName": "io.github.commentemeapp/adobe-commerce-mcp",
   "description": "MCP server for Adobe Commerce (Magento Open Source) PHP development: offline official docs, config files, CLI, Web API and module scaffolding",
   "type": "module",
   "bin": {
@@ -38,10 +38,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://www.npmjs.com/package/adobe-commerce-mcp",
+  "homepage": "https://www.npmjs.com/package/@commenteme/adobe-commerce-mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeluizr/adobe-commerce-mcp.git"
+    "url": "git+https://github.com/commentemeapp/adobe-commerce-mcp.git"
   },
   "license": "MIT",
   "engines": {

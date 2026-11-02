@@ -1,17 +1,17 @@
-![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales](https://raw.githubusercontent.com/zeluizr/adobe-commerce-mcp/main/assets/banner.png)
+![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales](https://raw.githubusercontent.com/commentemeapp/adobe-commerce-mcp/main/assets/banner.png)
 
 # adobe-commerce-mcp
 
 **Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.**
 
-![npm](https://img.shields.io/npm/v/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
+![npm](https://img.shields.io/npm/v/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
 ![node](https://img.shields.io/node/v/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
 ![license](https://img.shields.io/npm/l/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
 
 ## Instalación
 
 ```bash
-claude mcp add adobe-commerce -- npx -y adobe-commerce-mcp
+claude mcp add adobe-commerce -- npx -y @commenteme/adobe-commerce-mcp
 ```
 
 Requiere Node `>= 18`. El cliente ejecuta el servidor con `npx`, así que no hace falta instalarlo. Para Claude Desktop, Cursor, Windsurf, VS Code y otros clientes, mira [Otros clientes](#otros-clientes).
@@ -54,7 +54,7 @@ En `claude_desktop_config.json` (Claude Desktop), `~/.cursor/mcp.json` o `.curso
   "mcpServers": {
     "adobe-commerce": {
       "command": "npx",
-      "args": ["-y", "adobe-commerce-mcp"]
+      "args": ["-y", "@commenteme/adobe-commerce-mcp"]
     }
   }
 }
@@ -68,13 +68,13 @@ En VS Code, `.vscode/mcp.json`:
     "adobe-commerce": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "adobe-commerce-mcp"]
+      "args": ["-y", "@commenteme/adobe-commerce-mcp"]
     }
   }
 }
 ```
 
-Cualquier cliente con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y adobe-commerce-mcp`. Con una instalación global (`npm install -g adobe-commerce-mcp`), el comando es `adobe-commerce-mcp`. En Claude Code, `--scope project` deja la configuración en `.mcp.json` para compartirla con el equipo.
+Cualquier cliente con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y @commenteme/adobe-commerce-mcp`. Con una instalación global (`npm install -g @commenteme/adobe-commerce-mcp`), el comando es `adobe-commerce-mcp`. En Claude Code, `--scope project` deja la configuración en `.mcp.json` para compartirla con el equipo.
 
 ### Herramientas
 
