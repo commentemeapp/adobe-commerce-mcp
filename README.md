@@ -5,8 +5,8 @@
 **Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.**
 
 ![npm](https://img.shields.io/npm/v/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
-![node](https://img.shields.io/node/v/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
-![license](https://img.shields.io/npm/l/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
+![node](https://img.shields.io/node/v/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
+![license](https://img.shields.io/npm/l/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
 
 ## Instalación
 
@@ -180,7 +180,7 @@ Convenciones: TypeScript con módulos ESM; Prettier sin punto y coma y con comil
 
 ### Ramas y publicación
 
-El trabajo nace en una rama salida de `dev` y el PR va contra `dev`. De ahí se promueve a `qa` y, después de probar, a `main`, siempre con merge de la rama completa. El CI corre `npm run check` en Node 18, 20 y 22.
+El trabajo nace en una rama salida de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). El CI corre `npm run check` en Node 18, 20 y 22.
 
 Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md` y empuja un tag `v*`: el workflow `publish.yml` corre el gate, publica en npm con _provenance_, crea el GitHub Release y publica `server.json` en el MCP Registry. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
@@ -192,4 +192,4 @@ Abre un PR contra `dev`, con [Conventional Commits](https://www.conventionalcomm
 
 ---
 
-Hecho por [commente.me](https://commente.me) · hola@commente.me
+Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
