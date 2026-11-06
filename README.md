@@ -37,7 +37,7 @@ Para quien escribe módulos de Adobe Commerce (Magento Open Source) en PaaS o en
 - **Scaffolding**: módulo, plugin, observer, controller y tabla de `db_schema.xml`. Las herramientas devuelven los archivos (ruta y contenido) para que el cliente los escriba, y cada archivo dice de que página de la documentación salió.
 - **Local y sin credenciales**: no abre conexiones, no pide login y no escribe en disco. Todo el conocimiento está en `data/`.
 
-Funciona con Claude Code, Claude Desktop, Cursor, VS Code, Windsurf y cualquier cliente MCP con transporte stdio.
+Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP con transporte stdio.
 
 ## Por que existe
 
@@ -73,6 +73,28 @@ En VS Code, `.vscode/mcp.json`:
   }
 }
 ```
+
+**Codex**, con el CLI (queda en `~/.codex/config.toml`):
+
+```bash
+codex mcp add adobe-commerce -- npx -y @commenteme/adobe-commerce-mcp
+```
+
+O a mano, en `~/.codex/config.toml` o en `.codex/config.toml` del proyecto:
+
+```toml
+[mcp_servers.adobe-commerce]
+command = "npx"
+args = ["-y", "@commenteme/adobe-commerce-mcp"]
+```
+
+**Gemini CLI**, con el CLI (`-s user` lo deja en `~/.gemini/settings.json`; sin `-s`, en `.gemini/settings.json` del proyecto):
+
+```bash
+gemini mcp add -s user adobe-commerce npx -y @commenteme/adobe-commerce-mcp
+```
+
+**GitHub Copilot CLI**, en `~/.copilot/mcp-config.json` o en `.mcp.json` del proyecto, con el mismo JSON de `mcpServers` de arriba. En VS Code, Copilot usa el `.vscode/mcp.json`.
 
 Cualquier cliente con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y @commenteme/adobe-commerce-mcp`. Con una instalación global (`npm install -g @commenteme/adobe-commerce-mcp`), el comando es `adobe-commerce-mcp`. En Claude Code, `--scope project` deja la configuración en `.mcp.json` para compartirla con el equipo.
 
