@@ -1,4 +1,4 @@
-![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.](.github/assets/banner.png)
+![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.](https://raw.githubusercontent.com/commentemeapp/adobe-commerce-mcp/main/.github/assets/banner.png)
 
 # adobe-commerce-mcp
 
