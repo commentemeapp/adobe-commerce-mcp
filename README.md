@@ -1,12 +1,12 @@
-![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales](https://raw.githubusercontent.com/commentemeapp/adobe-commerce-mcp/main/assets/banner.png)
+![adobe-commerce-mcp · Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.](.github/assets/banner.png)
 
 # adobe-commerce-mcp
 
 **Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.**
 
-![npm](https://img.shields.io/npm/v/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
-![node](https://img.shields.io/node/v/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
-![license](https://img.shields.io/npm/l/@commenteme/adobe-commerce-mcp?labelColor=005278&color=FFBD38)
+[![npm](https://badgen.net/npm/v/@commenteme/adobe-commerce-mcp?color=005278)](https://www.npmjs.com/package/@commenteme/adobe-commerce-mcp)
+[![node](https://badgen.net/npm/node/@commenteme/adobe-commerce-mcp)](https://nodejs.org)
+[![licencia](https://badgen.net/npm/license/@commenteme/adobe-commerce-mcp)](./LICENSE)
 
 ## Instalación
 
@@ -202,9 +202,9 @@ Convenciones: TypeScript con módulos ESM; Prettier sin punto y coma y con comil
 
 ### Ramas y publicación
 
-El trabajo nace en una rama salida de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). El CI corre `npm run check` en Node 18, 20 y 22.
+El trabajo nace en una rama salida de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). No hay CI en GitHub: antes de cada merge y de cada publicación corre `npm run check` en tu máquina.
 
-Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md` y empuja un tag `v*`: el workflow `publish.yml` corre el gate, publica en npm con _provenance_, crea el GitHub Release y publica `server.json` en el MCP Registry. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
+Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md`, haz el merge a `main`, crea el tag `v*` y, desde `main` y en una terminal interactiva (npm pide autenticarse en el navegador), corre `npm publish`. El `server.json` se publica en el MCP Registry con `mcp-publisher publish`. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
 ## Contribuir · Licencia
 
@@ -212,6 +212,4 @@ Abre un PR contra `dev`, con [Conventional Commits](https://www.conventionalcomm
 
 [MIT](LICENSE). Los datos de `data/` conservan las licencias de sus fuentes (Apache-2.0 y MIT): mira [NOTICE](NOTICE).
 
----
-
-Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
+_Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
