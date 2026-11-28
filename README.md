@@ -4,9 +4,7 @@
 
 **Servidor MCP para módulos de Adobe Commerce en PHP, sin red y sin credenciales.**
 
-[![npm](https://badgen.net/npm/v/@commenteme/adobe-commerce-mcp?color=005278)](https://www.npmjs.com/package/@commenteme/adobe-commerce-mcp)
-[![node](https://badgen.net/npm/node/@commenteme/adobe-commerce-mcp)](https://nodejs.org)
-[![licencia](https://badgen.net/npm/license/@commenteme/adobe-commerce-mcp)](./LICENSE)
+Versión 0.2.0 · en desarrollo. Cambios en [CHANGELOG.md](CHANGELOG.md).
 
 ## Instalación
 
@@ -14,36 +12,7 @@
 claude mcp add adobe-commerce -- npx -y @commenteme/adobe-commerce-mcp
 ```
 
-Requiere Node `>= 18`. El cliente ejecuta el servidor con `npx`, así que no hace falta instalarlo. Para Claude Desktop, Cursor, Windsurf, VS Code y otros clientes, mira [Otros clientes](#otros-clientes).
-
-## Uso rápido
-
-Reinicia el cliente y pide lo que necesitas en lenguaje natural. El asistente elige la herramienta:
-
-- "Crea el módulo `Acme_Reviews` que dependa de `Magento_Catalog`"
-- "Agrega un plugin after a `Magento\Catalog\Model\Product::getName`"
-- "Dónde va el `system.xml` y cuál es su XSD?"
-- "Crea la tabla `acme_review` con clave foránea a `catalog_product_entity`"
-- "Que opciones tiene `bin/magento setup:static-content:deploy`?"
-- "Que argumentos recibe la mutation `addProductsToCart`?"
-
-## Que incluye
-
-Para quien escribe módulos de Adobe Commerce (Magento Open Source) en PaaS o en servidor propio: `di.xml`, plugins, observers, layout, `db_schema.xml`, `webapi.xml` y el resto del día a día en PHP.
-
-- **Documentación oficial offline**: 1.896 páginas de cuatro repositorios de AdobeDocs, con búsqueda BM25 por secciones. Cada resultado trae título, URL pública y ruta en el repositorio de origen.
-- **Archivos de configuración**: que es cada uno, dónde va (carpeta y área), la URN del XSD cuando la documentación la da y las páginas que lo explican.
-- **CLI y Web API**: los 147 comandos de `bin/magento` (2.4.9) con sus opciones, 614 endpoints REST del esquema OpenAPI y 225 queries y mutations de GraphQL.
-- **Scaffolding**: módulo, plugin, observer, controller y tabla de `db_schema.xml`. Las herramientas devuelven los archivos (ruta y contenido) para que el cliente los escriba, y cada archivo dice de que página de la documentación salió.
-- **Local y sin credenciales**: no abre conexiones, no pide login y no escribe en disco. Todo el conocimiento está en `data/`.
-
-Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP con transporte stdio.
-
-## Por que existe
-
-El MCP oficial de Adobe, [`@adobe-commerce/commerce-extensibility-tools`](https://www.npmjs.com/package/@adobe-commerce/commerce-extensibility-tools), cubre el desarrollo con App Builder (comandos `aio`). Pide iniciar sesión en Adobe IMS (`aio auth login`), incluso para buscar documentación; su licencia es propietaria (EULA), y una de sus herramientas envía el historial de la conversación a Adobe. Si desarrollas con App Builder, ocupa ese. Para el desarrollo en PHP no hay servidor oficial: este cubre ese caso con la documentación pública de Adobe Commerce, licencia MIT, sin cuenta y sin red.
-
-## Documentación
+El cliente ejecuta el servidor con `npx`, así que no hace falta instalarlo. Para Claude Desktop, Cursor, Windsurf, VS Code y otros clientes, mira [Otros clientes](#otros-clientes).
 
 ### Otros clientes
 
@@ -98,6 +67,33 @@ gemini mcp add -s user adobe-commerce npx -y @commenteme/adobe-commerce-mcp
 
 Cualquier cliente con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y @commenteme/adobe-commerce-mcp`. Con una instalación global (`npm install -g @commenteme/adobe-commerce-mcp`), el comando es `adobe-commerce-mcp`. En Claude Code, `--scope project` deja la configuración en `.mcp.json` para compartirla con el equipo.
 
+## Uso
+
+Reinicia el cliente y pide lo que necesitas en lenguaje natural. El asistente elige la herramienta:
+
+- "Crea el módulo `Acme_Reviews` que dependa de `Magento_Catalog`"
+- "Agrega un plugin after a `Magento\Catalog\Model\Product::getName`"
+- "Dónde va el `system.xml` y cuál es su XSD?"
+- "Crea la tabla `acme_review` con clave foránea a `catalog_product_entity`"
+- "Que opciones tiene `bin/magento setup:static-content:deploy`?"
+- "Que argumentos recibe la mutation `addProductsToCart`?"
+
+### Que incluye
+
+Para quien escribe módulos de Adobe Commerce (Magento Open Source) en PaaS o en servidor propio: `di.xml`, plugins, observers, layout, `db_schema.xml`, `webapi.xml` y el resto del día a día en PHP.
+
+- **Documentación oficial offline**: 1.896 páginas de cuatro repositorios de AdobeDocs, con búsqueda BM25 por secciones. Cada resultado trae título, URL pública y ruta en el repositorio de origen.
+- **Archivos de configuración**: que es cada uno, dónde va (carpeta y área), la URN del XSD cuando la documentación la da y las páginas que lo explican.
+- **CLI y Web API**: los 147 comandos de `bin/magento` (2.4.9) con sus opciones, 614 endpoints REST del esquema OpenAPI y 225 queries y mutations de GraphQL.
+- **Scaffolding**: módulo, plugin, observer, controller y tabla de `db_schema.xml`. Las herramientas devuelven los archivos (ruta y contenido) para que el cliente los escriba, y cada archivo dice de que página de la documentación salió.
+- **Local y sin credenciales**: no abre conexiones, no pide login y no escribe en disco. Todo el conocimiento está en `data/`.
+
+Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP con transporte stdio.
+
+### Por que existe
+
+El MCP oficial de Adobe, [`@adobe-commerce/commerce-extensibility-tools`](https://www.npmjs.com/package/@adobe-commerce/commerce-extensibility-tools), cubre el desarrollo con App Builder (comandos `aio`). Pide iniciar sesión en Adobe IMS (`aio auth login`), incluso para buscar documentación; su licencia es propietaria (EULA), y una de sus herramientas envía el historial de la conversación a Adobe. Si desarrollas con App Builder, ocupa ese. Para el desarrollo en PHP no hay servidor oficial: este cubre ese caso con la documentación pública de Adobe Commerce, licencia MIT, sin cuenta y sin red.
+
 ### Herramientas
 
 La entrada [src/index.ts](src/index.ts) conecta el servidor por stdio, y las diez herramientas se registran en [src/tools/index.ts](src/tools/index.ts).
@@ -148,26 +144,13 @@ Quedaron fuera las notas de versión, las mas de 900 páginas de parches del Qua
 
 Las licencias de las fuentes van en [data/licenses/](data/licenses/) y el detalle, en [NOTICE](NOTICE). Este proyecto no está afiliado a Adobe ni cuenta con su respaldo.
 
-### Estructura
+## Requisitos
 
-```text
-src/
-├── index.ts            # entry point del binario (stdio)
-├── server.ts           # McpServer: registra tools y resources
-├── tools/              # una herramienta por archivo, registradas en tools/index.ts
-├── scaffold/           # validación de nombres y formato de los archivos generados
-├── resources/          # adobe-commerce://docs, config-files y sources
-└── knowledge/          # carga de data/ y búsqueda BM25
-scripts/
-├── ingerir.ts          # genera data/ a partir de los clones de AdobeDocs
-├── catalogo-config.ts  # catálogo de archivos de configuración, con sus fuentes
-├── probar-mcp.mjs      # arranca el servidor por stdio y comprueba las herramientas
-└── rastros.mjs         # busca rutas locales, correos personales y nombres de clientes
-data/                   # generado: docs, cli.json, webapi/, config-files.json, licencias
-test/                   # node --test sobre el build
-```
+- Node `>= 18`.
+- Un cliente MCP con transporte stdio.
+- No pide cuenta de Adobe, login ni red.
 
-### Desarrollo
+## Desarrollo
 
 ```bash
 npm install
@@ -206,10 +189,35 @@ El trabajo nace en una rama salida de `dev` y el PR va contra `dev`. Después de
 
 Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md`, haz el merge a `main`, crea el tag `v*` y, desde `main` y en una terminal interactiva (npm pide autenticarse en el navegador), corre `npm publish`. El `server.json` se publica en el MCP Registry con `mcp-publisher publish`. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
-## Contribuir · Licencia
+### Contribuir
 
 Abre un PR contra `dev`, con [Conventional Commits](https://www.conventionalcommits.org/es/v1.0.0/) y `npm run check` en verde.
 
-[MIT](LICENSE). Los datos de `data/` conservan las licencias de sus fuentes (Apache-2.0 y MIT): mira [NOTICE](NOTICE).
+## Estructura
+
+```text
+src/
+├── index.ts            # entry point del binario (stdio)
+├── server.ts           # McpServer: registra tools y resources
+├── tools/              # una herramienta por archivo, registradas en tools/index.ts
+├── scaffold/           # validación de nombres y formato de los archivos generados
+├── resources/          # adobe-commerce://docs, config-files y sources
+└── knowledge/          # carga de data/ y búsqueda BM25
+scripts/
+├── ingerir.ts          # genera data/ a partir de los clones de AdobeDocs
+├── catalogo-config.ts  # catálogo de archivos de configuración, con sus fuentes
+├── probar-mcp.mjs      # arranca el servidor por stdio y comprueba las herramientas
+└── rastros.mjs         # busca rutas locales, correos personales y nombres de clientes
+data/                   # generado: docs, cli.json, webapi/, config-files.json, licencias
+test/                   # node --test sobre el build
+```
+
+## Licencia
+
+[MIT](./LICENSE). Los datos de `data/` conservan las licencias de sus fuentes (Apache-2.0 y MIT): mira [NOTICE](NOTICE).
+
+Contacto: hablecon@commente.me
+
+---
 
 _Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
